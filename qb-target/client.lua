@@ -84,7 +84,7 @@ local function DrawTarget()
 
 				SetScriptGfxAlignParams(0.0, 0.0, 0.0, 0.0)
 				SetDrawOrigin(zone.center.x, zone.center.y, zone.center.z)
-				DrawSprite('interactions_txd', 'pin', 0, 0, 0.0125, 0.02333333333333333, 0, 255, 255, 255, 255)
+				DrawSprite('qbtarget_txd', 'pin', 0, 0, 0.0125, 0.02333333333333333, 0, 255, 255, 255, 255)
 				ResetScriptGfxAlign()
 			end
 
@@ -1327,7 +1327,7 @@ CreateThread(function()
 		AddGlobalPlayer(Config.GlobalPlayerOptions)
 	end
 
-	local txd = CreateRuntimeTxd('interactions_txd')
+	local txd = CreateRuntimeTxd('qbtarget_txd')
     for _, v in pairs(Textures) do
         CreateRuntimeTextureFromImage(txd, tostring(v), "sprite/" .. v .. ".png")
     end
